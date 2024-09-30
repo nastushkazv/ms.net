@@ -70,4 +70,4 @@
 После успешного удаления запись должна быть удалена из списка доступных туров.
 
 База Данных
-![Модель туристического агентства]([file:///C:/Users/User/Desktop/МОиАИС,ПММ/3КУРС/5СЕМ/MS.NET/1lab/turag.jpg](https://github.com/nastushkazv/ms.net/blob/main/turag.pdf))
+![Модель туристического агентства]([file:///C:/Users/User/Desktop/МОиАИС,ПММ/3КУРС/5СЕМ/MS.NET/1lab/turag/turag.jpg](https://github.com/nastushkazv/ms.net/blob/main/turag.pdf))
