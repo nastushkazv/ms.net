@@ -110,4 +110,4 @@
 Удаление записи из списка доступных туров после успешного удаления.   
 
 База Данных  
-![Модель туристического агентства]([file:///C:/Users/User/Desktop/МОиАИС,ПММ/3КУРС/5СЕМ/MS.NET/1lab/travel agency data base/travel agency.jpg](https://github.com/nastushkazv/ms.net/blob/main/travel%20agency%20data%20base.pdf))
+![Модель туристического агентства]([file:///C:/Users/User/Desktop/МОиАИС,ПММ/3КУРС/5СЕМ/MS.NET/1lab/travelagency data base/travelagency.jpg](https://github.com/nastushkazv/ms.net/blob/main/travelagency%20data%20base.pdf))
