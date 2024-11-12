@@ -1,4 +1,5 @@
-﻿using TravelAgency.Service.Settings;
+﻿
+using TravelAgency.Service.Settings;
 using Microsoft.EntityFrameworkCore;
 
 namespace TravelAgency.Service.IoC;
