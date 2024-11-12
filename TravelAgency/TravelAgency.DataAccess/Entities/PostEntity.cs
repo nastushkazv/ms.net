@@ -6,4 +6,6 @@ namespace TravelAgency.DataAccess.Entities;
 public class PostEntity: BaseEntity
 {
     public string Name { get; set; }
+    
+    public virtual ICollection<EmployeePostEntity> EmployeePosts { get; set; }
 }

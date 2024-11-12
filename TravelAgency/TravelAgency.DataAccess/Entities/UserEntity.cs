@@ -10,4 +10,7 @@ public class UserEntity: BaseEntity
     
     public int RoleId { get; set; }
     public RoleEntity Role { get; set; }
+    
+    public virtual ICollection<ClientEntity> Clients { get; set; }
+    public virtual ICollection<EmployeeEntity> Employees { get; set; }
 }

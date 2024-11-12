@@ -15,4 +15,6 @@ public class EmployeeEntity: BaseEntity
     
     public int UserId { get; set; }
     public UserEntity User { get; set; }
+    
+    public virtual ICollection<EmployeePostEntity> EmployeePosts { get; set; } 
 }

@@ -9,4 +9,6 @@ public class RegionEntity : BaseEntity
     
     public int CountryId { get; set; }
     public CountryEntity Country { get; set; }
+    
+    public virtual ICollection<CityEntity> Cities { get; set; }
 }
