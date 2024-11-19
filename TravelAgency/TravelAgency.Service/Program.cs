@@ -1,14 +1,23 @@
 using TravelAgency.Service.IoC;
+using TravelAgency.Service.Settings;
+
+var configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json", optional: false)
+    .Build();
+
+var settings = TravelAgencySettingsReader.Read(configuration);
 
 var builder = WebApplication.CreateBuilder(args);
 
-SwaggerConfigurator.ConfigureServices(builder.Services);
 SerilogConfigurator.ConfigureService(builder);
+DbContextConfigurator.ConfigureService(builder.Services, settings);
+SwaggerConfigurator.ConfigureServices(builder.Services);
 
 var app = builder.Build();
 
-SwaggerConfigurator.ConfigureApplication(app);
 SerilogConfigurator.ConfigureApplication(app);
+DbContextConfigurator.ConfigureApplication(app);
+SwaggerConfigurator.ConfigureApplication(app);
 
 app.UseHttpsRedirection();
 

@@ -4,9 +4,20 @@ using TravelAgency.DataAccess.Entities;
 namespace TravelAgency.DataAccess;
 public class TravelAgencyDbContext : DbContext
 {            
+    public DbSet<UserEntity> Users { get; set; }
+    public DbSet<CityEntity> Cities { get; set; }
+    public DbSet<ClientEntity> Client { get; set; }
+    public DbSet<CountryEntity> Countries { get; set; }
+    public DbSet<EmployeeEntity> Employees { get; set; }
+    public DbSet<EmployeePostEntity> EmployeesPosts { get; set; }
+    public DbSet<PostEntity> Posts { get; set; }
+    public DbSet<PurchaseTourEntity> PurchaseTours { get; set; }
+    public DbSet<RegionEntity> Regions { get; set; }
+    public DbSet<RoleEntity> Roles { get; set; }
+    public DbSet<TourEntity> Tours { get; set; }
+    public DbSet<TourTypeEntity> ToursTypes { get; set; }
     public TravelAgencyDbContext(DbContextOptions<TravelAgencyDbContext> options) : base(options)
-    {
-    }
+    {}
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<UserEntity>().HasKey(u => u.Id);
