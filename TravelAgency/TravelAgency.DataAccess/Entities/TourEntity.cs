@@ -13,4 +13,5 @@ public class TourEntity: BaseEntity
     
     public int TourTypeId { get; set; }
     public TourTypeEntity TourType { get; set; }
+    public virtual ICollection<PurchaseTour> PurchaseTours { get; set; } 
 }

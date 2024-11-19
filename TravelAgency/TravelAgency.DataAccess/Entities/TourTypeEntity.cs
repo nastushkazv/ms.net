@@ -6,4 +6,6 @@ namespace TravelAgency.DataAccess.Entities;
 public class TourTypeEntity:BaseEntity
 {
     public string Name { get; set; }
+    
+    public virtual ICollection<TourEntity> Tours { get; set; }
 }

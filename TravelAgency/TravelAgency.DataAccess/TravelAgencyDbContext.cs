@@ -43,7 +43,6 @@ public class TravelAgencyDbContext : DbContext
 
         modelBuilder.Entity<CityEntity>().HasKey(c => c.Id);
 
-
         modelBuilder.Entity<PostEntity>().HasKey(p => p.Id);
         modelBuilder.Entity<PostEntity>()
             .HasMany(p => p.EmployeePosts)
@@ -55,8 +54,18 @@ public class TravelAgencyDbContext : DbContext
             .HasOne(ep => ep.Employee)
             .WithMany(e => e.EmployeePosts)
             .HasForeignKey(ep => ep.EmployeeId);
-        
 
+        modelBuilder.Entity<TourTypeEntity>().HasKey(tt => tt.Id);
+        modelBuilder.Entity<TourTypeEntity>()
+            .HasMany(tt => tt.Tours) 
+            .WithOne(t => t.TourType)
+            .HasForeignKey(t => t.TourTypeId);
+
+        modelBuilder.Entity<TourEntity>().HasKey(t => t.Id);
+        modelBuilder.Entity<TourEntity>()
+            .HasOne(t => t.TourType)
+            .WithMany(tt => tt.Tours)
+            .HasForeignKey(t => t.TourTypeId);
 
         modelBuilder.Entity<PurchaseTour>().HasKey(pt => pt.Id);
         modelBuilder.Entity<PurchaseTour>()
@@ -65,8 +74,12 @@ public class TravelAgencyDbContext : DbContext
             .HasForeignKey(pt => pt.EmployeeId);
         modelBuilder.Entity<PurchaseTour>()
             .HasOne(pt => pt.Client)
-            .WithMany()
+            .WithMany() 
             .HasForeignKey(pt => pt.ClientId);
+        modelBuilder.Entity<PurchaseTour>()
+            .HasOne(pt => pt.Tour)
+            .WithMany(t => t.PurchaseTours)
+            .HasForeignKey(pt => pt.TourId);
 
     }
 }
