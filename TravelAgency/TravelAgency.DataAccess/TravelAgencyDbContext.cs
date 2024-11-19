@@ -2,10 +2,9 @@
 using TravelAgency.DataAccess.Entities;
 
 namespace TravelAgency.DataAccess;
-
 public class TravelAgencyDbContext : DbContext
-{
-    public TravelAgencyDbContext(DbContextOptions options) : base(options)
+{            
+    public TravelAgencyDbContext(DbContextOptions<TravelAgencyDbContext> options) : base(options)
     {
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -67,16 +66,16 @@ public class TravelAgencyDbContext : DbContext
             .WithMany(tt => tt.Tours)
             .HasForeignKey(t => t.TourTypeId);
 
-        modelBuilder.Entity<PurchaseTour>().HasKey(pt => pt.Id);
-        modelBuilder.Entity<PurchaseTour>()
+        modelBuilder.Entity<PurchaseTourEntity>().HasKey(pt => pt.Id);
+        modelBuilder.Entity<PurchaseTourEntity>()
             .HasOne(pt => pt.Employee)
             .WithMany() 
             .HasForeignKey(pt => pt.EmployeeId);
-        modelBuilder.Entity<PurchaseTour>()
+        modelBuilder.Entity<PurchaseTourEntity>()
             .HasOne(pt => pt.Client)
             .WithMany() 
             .HasForeignKey(pt => pt.ClientId);
-        modelBuilder.Entity<PurchaseTour>()
+        modelBuilder.Entity<PurchaseTourEntity>()
             .HasOne(pt => pt.Tour)
             .WithMany(t => t.PurchaseTours)
             .HasForeignKey(pt => pt.TourId);

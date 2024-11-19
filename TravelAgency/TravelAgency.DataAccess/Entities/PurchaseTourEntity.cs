@@ -4,7 +4,7 @@ namespace TravelAgency.DataAccess.Entities;
 
 [Table("PurchaseTours")]
 
-public class PurchaseTour:BaseEntity
+public class PurchaseTourEntity:BaseEntity
 {
     public DateTime Data { get; set; }
     public int  Payment { get; set; }
