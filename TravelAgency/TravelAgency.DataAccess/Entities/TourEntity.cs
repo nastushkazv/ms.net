@@ -5,6 +5,8 @@ namespace TravelAgency.DataAccess.Entities;
 [Table("Tours")]
 public class TourEntity: BaseEntity
 {
+    public string Name { get; set; }
+    public string Destination { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
     public int Price { get; set; }  

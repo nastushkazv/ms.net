@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgency.Service", "Tra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgency.DataAccess", "TravelAgency.DataAccess\TravelAgency.DataAccess.csproj", "{8DB757E5-C305-438B-88EF-5891D38E8CDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgency.BL", "TravelAgency.BL\TravelAgency.BL.csproj", "{298EF64D-7424-4920-94D7-CD6CC1FB7FBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{8DB757E5-C305-438B-88EF-5891D38E8CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DB757E5-C305-438B-88EF-5891D38E8CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DB757E5-C305-438B-88EF-5891D38E8CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{298EF64D-7424-4920-94D7-CD6CC1FB7FBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{298EF64D-7424-4920-94D7-CD6CC1FB7FBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{298EF64D-7424-4920-94D7-CD6CC1FB7FBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{298EF64D-7424-4920-94D7-CD6CC1FB7FBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
