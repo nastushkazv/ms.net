@@ -12,7 +12,7 @@ public class TourEntity: BaseEntity
     public int Price { get; set; }  
     public string Insurance{ get; set; } 
     public string Hotel { get; set; } 
-    
+    public int DurationDays { get; set; }
     public int TourTypeId { get; set; }
     public TourTypeEntity TourType { get; set; }
     public virtual ICollection<PurchaseTourEntity> PurchaseTours { get; set; } 
